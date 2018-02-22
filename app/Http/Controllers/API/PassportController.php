@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use Validator;
 use Auth;
 use GuzzleHttp;
-use App\User;
+use App\Entities\User;
 
 class PassportController extends Controller
 {
@@ -41,6 +41,8 @@ class PassportController extends Controller
 
     /**
      * login
+     * @param $request
+     * @return object
      */
     public function login(Request $request)
     {
@@ -62,6 +64,8 @@ class PassportController extends Controller
 
     /**
      * refresh token
+     * @param $request
+     * @return object
      */
     public function refreshToken(Request $request)
     {
