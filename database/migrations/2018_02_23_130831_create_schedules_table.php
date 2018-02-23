@@ -4,9 +4,9 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
 /**
- * Class CreateReceiptTicketsTable.
+ * Class CreateSchedulesTable.
  */
-class CreateReceiptTicketsTable extends Migration
+class CreateSchedulesTable extends Migration
 {
 	/**
 	 * Run the migrations.
@@ -15,10 +15,12 @@ class CreateReceiptTicketsTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('receipts_tickets', function(Blueprint $table) {
+		Schema::create('schedules', function(Blueprint $table) {
             $table->increments('id');
-            $table->integer('receipt_id');
-            $table->integer('ticket_id');
+            $table->integer('movie_id');
+            $table->integer('room_id');
+            $table->integer('showtime_id');
+            $table->date('show_date');
             $table->timestamps();
 		});
 	}
@@ -30,6 +32,6 @@ class CreateReceiptTicketsTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('receipts_tickets');
+		Schema::drop('schedules');
 	}
 }

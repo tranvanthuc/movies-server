@@ -22,9 +22,10 @@ class Movie extends Model implements Transformable
      */
     protected $fillable = ['genre_id', 'title', 'overview', 'background_path', 'poster_path', 'trailer', 'producer', 'release_date', 'runtime', 'language'];
 
-    public function genre()
+    public function genres()
     {
-        return $this->belongsTo(Genre::class);
+        return $this->belongsToMany(Genre::class)->withTimestamps();
     }
+
 
 }

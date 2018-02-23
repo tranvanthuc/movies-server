@@ -4,16 +4,16 @@ namespace App\Repositories;
 
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use App\Repositories\ReceiptTicketRepository;
-use App\Entities\ReceiptTicket;
-use App\Validators\ReceiptTicketValidator;
+use App\Repositories\TicketRepository;
+use App\Entities\Ticket;
+use App\Validators\TicketValidator;
 
 /**
- * Class ReceiptTicketRepositoryEloquent.
+ * Class TicketRepositoryEloquent.
  *
  * @package namespace App\Repositories;
  */
-class ReceiptTicketRepositoryEloquent extends BaseRepository implements ReceiptTicketRepository
+class TicketRepositoryEloquent extends BaseRepository implements TicketRepository
 {
     /**
      * Specify Model class name
@@ -22,7 +22,7 @@ class ReceiptTicketRepositoryEloquent extends BaseRepository implements ReceiptT
      */
     public function model()
     {
-        return ReceiptTicket::class;
+        return Ticket::class;
     }
 
     

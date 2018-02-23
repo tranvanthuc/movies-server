@@ -24,6 +24,6 @@ class Genre extends Model implements Transformable
 
     public function movies()
     {
-        return $this->hasMany(Movie::class);
+        return $this->belongsToMany(Movie::class)->withTimestamps();
     }
 }

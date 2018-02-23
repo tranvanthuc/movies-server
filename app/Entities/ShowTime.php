@@ -22,4 +22,8 @@ class ShowTime extends Model implements Transformable
      */
     protected $fillable = ['start_time', 'end_time'];
 
+    public function schedules()
+    {
+        return $this->hasMany(Schedule::class);
+    }
 }
