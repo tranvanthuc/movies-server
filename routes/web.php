@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/login', 'TestController@getLogin')->name('login');
+Route::get('/login-slack', 'TestController@getLoginSlack')->name('login.slack');
+Route::get('/slack/auth', 'TestController@getToken');
+Route::get('/home', 'TestController@getHome')->name('home');
