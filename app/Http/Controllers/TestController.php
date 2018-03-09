@@ -75,22 +75,16 @@ class TestController extends Controller
 
     public function sendMessage()
     {
+//        add chat write scope
 //        $url = env('SLACK_URL') . 'oauth/authorize?client_id=' . env('SlACK_CLIENT_ID') . '&scope=chat:write:user';
 //        header('Location: ' . $url);
 //        die(1);
+
         $token = Auth::user()->access_token;
         $username = Auth::user()->name;
         $message = "My name is Tran Van Thuc";
         $icon = Auth::user()->image_1;
         $channel = 'random';
-//        $data = implode(array(
-//            "token=" .$token,
-//            "as_user=true" ,
-//            "username=". $username,
-//            "channel=". $channel,
-//            "text=". $message,
-//            "icon_url=". $icon
-//        ), "&");
 
         $data = array(
             'token' => $token,
