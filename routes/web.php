@@ -13,7 +13,8 @@
 
 
 
-Route::get('/login', 'TestController@getLogin')->name('login');
+Route::get('/', 'TestController@getLogin')->name('login');
 Route::get('/login-slack', 'TestController@getLoginSlack')->name('login.slack');
 Route::get('/slack/auth', 'TestController@getToken');
 Route::get('/home', 'TestController@getHome')->name('home');
+Route::get('/send-msg', 'TestController@sendMessage')->name('send.msg');

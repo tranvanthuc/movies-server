@@ -9,6 +9,7 @@
 <body>
     @auth
         <h1>Hello {{auth()->user()->name}}, Welcome to my website</h1>
+        <a href="{{route('send.msg')}}">Send Message</a>
     @endauth
 </body>
 </html>
